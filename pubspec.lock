@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  cached_network:
-    dependency: "direct main"
-    description:
-      name: cached_network
-      sha256: "7ab4144ea2330f8d995fc6632b00083edfb08057ec2c4b65dfb3123ddc011399"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.0"
   cached_network_image:
     dependency: "direct main"
     description:
@@ -57,14 +49,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
-  charset:
-    dependency: transitive
-    description:
-      name: charset
-      sha256: "27802032a581e01ac565904ece8c8962564b1070690794f0072f6865958ce8b9"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.1"
   clock:
     dependency: transitive
     description:

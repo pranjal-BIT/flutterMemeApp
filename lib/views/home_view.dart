@@ -16,18 +16,23 @@ class HomeView extends StatelessWidget {
         future: API.getMemes(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return ListView.builder(
+            return GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 1.0,
+              )
+              ,
               itemCount: snapshot.data!.data!.memes!.length,
               itemBuilder: (context, index) {
                 final meme = snapshot.data!.data!.memes![index];
-                return ListTile(
-                  leading: CachedNetworkImage(
+                return GridTile(
+                  header: CachedNetworkImage(
                     imageUrl: meme.url!,
                     placeholder: (context, url) => const CircularProgressIndicator(),
                     errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
-                  title: Text(meme.name!),
-                  subtitle: Text(meme.url!),
+                  footer: Text(meme.name!),
+                  child: Text(meme.url!),
                 );
               },
             );

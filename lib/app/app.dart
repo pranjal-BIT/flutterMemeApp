@@ -13,9 +13,15 @@ class MyApp extends StatelessWidget {
       title: "Meme app",
       theme: ThemeData(
         useMaterial3: true,
+        colorScheme: MyThemes.lightColorScheme,
+        fontFamily: GoogleFonts.outfit().fontFamily,
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
         colorScheme: MyThemes.darkColorScheme,
         fontFamily: GoogleFonts.outfit().fontFamily,
       ),
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: const HomeView(),
     );
